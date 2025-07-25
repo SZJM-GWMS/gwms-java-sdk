@@ -1,0 +1,79 @@
+name: ✨ 功能请求
+description: 为gwms-java-sdk建议新功能
+title: "[Feature] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提出功能建议！
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 这个功能请求解决了什么问题？
+      placeholder: 我遇到的问题是...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 建议的解决方案
+      description: 您希望看到什么样的解决方案？
+      placeholder: 我希望能够...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 替代方案
+      description: 您考虑了哪些替代解决方案？
+      placeholder: 我也考虑过...
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: 使用场景
+      description: 请描述具体的使用场景
+      placeholder: |
+        在我的应用中，我需要...
+        这个功能将帮助我...
+
+  - type: textarea
+    id: example
+    attributes:
+      label: 代码示例
+      description: 如果可能，请提供期望的API使用示例
+      render: java
+      placeholder: |
+        // 期望的API使用方式
+        ApiClient client = Configuration.getDefaultApiClient();
+        // 新功能的使用示例...
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      description: 这个功能对您的项目有多重要？
+      options:
+        - 低 - 有了更好，没有也可以
+        - 中 - 会显著改善开发体验
+        - 高 - 对项目成功很重要
+        - 紧急 - 阻碍项目进展
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: additional
+    attributes:
+      label: 额外信息
+      options:
+        - label: 我愿意为这个功能贡献代码
+          required: false
+        - label: 我愿意帮助测试这个功能
+          required: false
+        - label: 这个功能与现有文档无关（不是文档问题）
+          required: true

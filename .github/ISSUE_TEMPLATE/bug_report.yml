@@ -1,0 +1,104 @@
+name: 🐛 Bug报告
+description: 报告SDK中的问题
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您花时间填写此bug报告！
+
+  - type: input
+    id: sdk-version
+    attributes:
+      label: SDK版本
+      description: 您使用的SDK版本是什么？
+      placeholder: 例如：1.0.3
+    validations:
+      required: true
+
+  - type: input
+    id: java-version
+    attributes:
+      label: Java版本
+      description: 您使用的Java版本是什么？
+      placeholder: 例如：OpenJDK 11.0.16
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么？
+      description: 详细描述遇到的问题
+      placeholder: 请详细描述bug的表现...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+      description: 您期望发生什么？
+      placeholder: 请描述您期望的行为...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重现步骤
+      description: 如何重现这个问题？
+      placeholder: |
+        1. 调用API '...'
+        2. 传入参数 '...'
+        3. 查看错误 '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: 代码示例
+      description: 请提供最小可重现的代码示例
+      render: java
+      placeholder: |
+        // 请提供重现问题的代码
+        ApiClient client = Configuration.getDefaultApiClient();
+        // ...
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 错误日志
+      description: 如果有错误日志，请粘贴在这里
+      render: shell
+      placeholder: |
+        Exception in thread "main" com.jmalltech.gwms.sdk.invoker.ApiException: ...
+
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      description: 您使用的操作系统？
+      placeholder: 例如：macOS 13.0, Windows 11, Ubuntu 20.04
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他信息
+      description: 您认为可能有用的任何其他信息
+      placeholder: 例如：网络环境、代理设置等...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 确认项
+      description: 请确认以下事项
+      options:
+        - label: 我已经搜索了现有的issues，确认这是一个新问题
+          required: true
+        - label: 我已经阅读了文档和常见问题
+          required: true
+        - label: 我愿意协助测试修复方案
+          required: false
