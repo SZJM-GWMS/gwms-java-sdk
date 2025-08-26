@@ -1,0 +1,24 @@
+# JitPack 构建配置
+# 支持多个 JDK 版本以确保兼容性
+
+jdk:
+  - openjdk8
+  - openjdk11
+  - openjdk17
+
+before_install:
+  - echo "准备 JitPack 构建环境"
+  - echo "当前 Java 版本:"
+  - java -version
+  - echo "使用 Java 8 兼容模式构建 GWMS Java SDK"
+
+install:
+  - echo "开始构建 GWMS Java SDK"
+  - mvn clean compile install -DskipTests
+  - echo "构建完成"
+
+env:
+  # 设置 Gradle 内存限制
+  GRADLE_OPTS: "-Xmx2048m -XX:MaxPermSize=512m"
+  # 设置 Maven 内存限制
+  MAVEN_OPTS: "-Xmx2048m -XX:MaxPermSize=512m"

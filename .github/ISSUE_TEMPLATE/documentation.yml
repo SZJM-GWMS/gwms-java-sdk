@@ -1,0 +1,89 @@
+name: 📚 文档问题
+description: 报告文档相关的问题
+title: "[Docs] "
+labels: ["documentation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您帮助改进文档！
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: 文档类型
+      description: 这个问题涉及哪种类型的文档？
+      options:
+        - README.md
+        - API文档
+        - 代码示例
+        - 安装指南
+        - 常见问题
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 文档位置
+      description: 问题出现在哪个文档或哪个章节？
+      placeholder: 例如：README.md 的"快速开始"部分
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 问题类型
+      description: 这是什么类型的文档问题？
+      options:
+        - 错误信息/错别字
+        - 信息过时
+        - 信息不准确
+        - 缺少信息
+        - 示例代码不工作
+        - 链接失效
+        - 格式问题
+        - 翻译问题
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 请详细描述文档问题
+      placeholder: 我发现...
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 当前内容
+      description: 如果适用，请粘贴有问题的当前文档内容
+      render: markdown
+
+  - type: textarea
+    id: suggested
+    attributes:
+      label: 建议的改进
+      description: 您建议如何改进这部分文档？
+      placeholder: 我建议...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 其他上下文
+      description: 任何其他有用的信息
+      placeholder: 这个问题影响了我...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 确认项
+      options:
+        - label: 我已经搜索了现有的issues，确认这是一个新问题
+          required: true
+        - label: 我愿意帮助改进这部分文档
+          required: false

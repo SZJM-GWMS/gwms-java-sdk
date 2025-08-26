@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 讨论和问题
+    url: https://github.com/SZJM-GWMS/gwms-java-sdk/discussions
+    about: 对于一般性问题和讨论，请使用Discussions
+  - name: 📖 项目文档
+    url: https://github.com/SZJM-GWMS/gwms-java-sdk#readme
+    about: 查看完整的项目文档和使用指南
+  - name: 🔍 搜索现有问题
+    url: https://github.com/SZJM-GWMS/gwms-java-sdk/issues?q=is%3Aissue
+    about: 在创建新issue之前，请先搜索现有问题
